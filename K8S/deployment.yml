@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-mini-app-deployment
+  labels:
+    app: mini-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mini-app
+  template:
+    metadata:
+      labels:
+        app: mini-app
+    spec:
+      containers:
+      - name: mini-app-container
+        image: emag5115/nodejs_hosting:latest
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mini-app
+spec:
+  containers:
+  - name: mini-app
+    image: emag5115/nodejs_hosting:latest
+    ports: 
+    - containerPort: 8080
